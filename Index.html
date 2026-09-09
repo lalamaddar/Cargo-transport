@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CargoGo — Cargo Transport & Logistics</title>
+  <meta name="description"
+        content="Fast, reliable and affordable cargo transport and logistics services.">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-content">
+
+      <a href="#" class="logo">
+        Cargo<span>Go</span>
+      </a>
+
+      <nav id="navMenu">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#tracking">Track Shipment</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a href="#quote" class="nav-btn">Get a Quote</a>
+
+      <button class="menu-btn" onclick="toggleMenu()">
+        ☰
+      </button>
+
+    </div>
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+
+    <div class="container hero-content">
+
+      <div class="hero-text">
+
+        <div class="badge">
+          🚚 Reliable Cargo Transport
+        </div>
+
+        <h1>
+          Move Your Cargo
+          <span>With Confidence.</span>
+        </h1>
+
+        <p>
+          Fast, secure and affordable cargo transportation
+          for businesses and individuals.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#quote" class="primary-btn">
+            Get a Free Quote →
+          </a>
+
+          <a href="#tracking" class="secondary-btn">
+            Track Shipment
+          </a>
+        </div>
+
+        <div class="trust">
+          <div>
+            <strong>10K+</strong>
+            <small>Shipments</small>
+          </div>
+
+          <div>
+            <strong>98%</strong>
+            <small>On-Time Delivery</small>
+          </div>
+
+          <div>
+            <strong>24/7</strong>
+            <small>Support</small>
+          </div>
+        </div>
+
+      </div>
+
+
+      <!-- QUOTE CARD -->
+      <div class="quote-card" id="quote">
+
+        <h2>Get a Quick Quote</h2>
+
+        <p>Tell us about your shipment.</p>
+
+        <form onsubmit="getQuote(event)">
+
+          <label>Pickup Location</label>
+          <input
+            type="text"
+            id="pickup"
+            placeholder="e.g. Karachi"
+            required
+          >
+
+          <label>Delivery Location</label>
+          <input
+            type="text"
+            id="delivery"
+            placeholder="e.g. Lahore"
+            required
+          >
+
+          <div class="form-row">
+
+            <div>
+              <label>Cargo Type</label>
+              <select id="cargoType">
+                <option>General Cargo</option>
+                <option>Documents</option>
+                <option>Electronics</option>
+                <option>Furniture</option>
+                <option>Machinery</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div>
+              <label>Weight</label>
+              <input
+                type="number"
+                id="weight"
+                placeholder="kg"
+                min="1"
+                required
+              >
+            </div>
+
+          </div>
+
+          <button type="submit" class="quote-btn">
+            Calculate Estimate
+          </button>
+
+          <div id="quoteResult" class="quote-result"></div>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SERVICES -->
+  <section class="section" id="services">
+
+    <div class="container">
+
+      <div class="section-heading">
+        <span>OUR SERVICES</span>
+        <h2>Complete Cargo Solutions</h2>
+        <p>
+          Reliable transportation solutions designed for
+          businesses of every size.
+        </p>
+      </div>
+
+      <div class="services-grid">
+
+        <div class="service-card">
+          <div class="service-icon">🚛</div>
+          <h3>Road Transport</h3>
+          <p>
+            Reliable nationwide road transportation
+            for all types of cargo.
+          </p>
+          <a href="#quote">Learn More →</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">📦</div>
+          <h3>Express Delivery</h3>
+          <p>
+            Fast delivery options for urgent shipments
+            and time-sensitive cargo.
+          </p>
+          <a href="#quote">Learn More →</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🏢</div>
+          <h3>Business Logistics</h3>
+          <p>
+            End-to-end logistics solutions for
+            growing businesses.
+          </p>
+          <a href="#quote">Learn More →</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🌍</div>
+          <h3>International Cargo</h3>
+          <p>
+            Global shipping solutions with reliable
+            logistics support.
+          </p>
+          <a href="#quote">Learn More →</a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- HOW IT WORKS -->
+  <section class="section process">
+
+    <div class="container">
+
+      <div class="section-heading">
+        <span>SIMPLE PROCESS</span>
+        <h2>How It Works</h2>
+      </div>
+
+      <div class="steps">
+
+        <div class="step">
+          <div class="step-number">01</div>
+          <h3>Request a Quote</h3>
+          <p>
+            Enter your pickup, delivery and cargo details.
+          </p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">02</div>
+          <h3>Book Your Shipment</h3>
+          <p>
+            Confirm your shipment and schedule pickup.
+          </p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">03</div>
+          <h3>Track Your Cargo</h3>
+          <p>
+            Follow your shipment from pickup to delivery.
+          </p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">04</div>
+          <h3>Safe Delivery</h3>
+          <p>
+            Your cargo arrives safely at its destination.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- TRACKING -->
+  <section class="tracking" id="tracking">
+
+    <div class="container tracking-content">
+
+      <div>
+        <span>SHIPMENT TRACKING</span>
+
+        <h2>
+          Where is your cargo?
+        </h2>
+
+        <p>
+          Enter your tracking number to check
+          the latest shipment status.
+        </p>
+      </div>
+
+      <form class="tracking-form" onsubmit="trackShipment(event)">
+
+        <input
+          type="text"
+          id="trackingNumber"
+          placeholder="Enter tracking number"
+          required
+        >
+
+        <button type="submit">
+          Track →
+        </button>
+
+      </form>
+
+      <div id="trackingResult"></div>
+
+    </div>
+
+  </section>
+
+
+  <!-- WHY US -->
+  <section class="section" id="about">
+
+    <div class="container about">
+
+      <div class="about-box">
+        🚚
+      </div>
+
+      <div class="about-text">
+
+        <span>WHY CARGOGO?</span>
+
+        <h2>
+          Your Cargo. Our Responsibility.
+        </h2>
+
+        <p>
+          We make cargo transportation simple,
+          transparent and reliable.
+        </p>
+
+        <ul>
+          <li>✓ Real-time shipment tracking</li>
+          <li>✓ Professional transport network</li>
+          <li>✓ Transparent pricing</li>
+          <li>✓ Dedicated customer support</li>
+          <li>✓ Secure cargo handling</li>
+        </ul>
+
+        <a href="#quote" class="primary-btn">
+          Start Shipping →
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CTA -->
+  <section class="cta" id="contact">
+
+    <div class="container">
+
+      <h2>Ready to Move Your Cargo?</h2>
+
+      <p>
+        Get a fast and transparent shipping estimate today.
+      </p>
+
+      <a href="#quote" class="cta-btn">
+        Get Your Free Quote →
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="container footer-content">
+
+      <div>
+        <div class="logo">
+          Cargo<span>Go</span>
+        </div>
+
+        <p>
+          Reliable cargo transport & logistics.
+        </p>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#tracking">Tracking</a>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <p>📞 +92 XXX XXXXXXX</p>
+        <p>✉️ info@cargogo.com</p>
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      © 2026 CargoGo. All rights reserved.
+    </div>
+
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
